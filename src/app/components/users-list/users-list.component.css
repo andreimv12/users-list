@@ -1,0 +1,8 @@
+.users-list{
+    padding: 20px;
+    
+}
+
+.users-list__item{
+    cursor: pointer;
+}

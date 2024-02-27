@@ -1,0 +1,40 @@
+<div class="u-width-height-full">
+
+    <form class="form u-width-height-full  ">
+        <div class="form__name">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Ex. fulano da silva" value="fulano">
+            </mat-form-field>
+        </div>
+
+        <div class="form__date-picker ">
+            <mat-form-field>
+                <mat-label>data de cadastro</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="form__status ">
+            <mat-form-field>
+                <mat-label>status</mat-label>
+                <mat-select>
+                    @for (food of foods; track food) {
+                    <mat-option [value]="food.teste">{{food.viewTeste}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form__botton u-display-flex">
+            <button mat-raised-button color="primary">Primary</button>
+        </div>
+
+
+
+    </form>
+
+</div>
